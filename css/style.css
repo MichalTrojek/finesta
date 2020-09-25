@@ -1,0 +1,19 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300; }
+
+.header {
+  background-image: linear-gradient(to right, rgba(38, 19, 72, 0.4), rgba(255, 0, 0, 0.4)), url(/img/header.png);
+  background-size: cover;
+  height: 85vh;
+  background-position: top; }
