@@ -1,0 +1,65 @@
+.nav-btn {
+    display: none;
+    @include respond(950) {
+        display: block;
+    }
+    &__checkbox {
+        display: none;
+    }
+    &__label {
+        z-index: 2;
+        position: fixed;
+        top: 4.5rem;
+        right: 4rem;
+        height: 8rem;
+        width: 8rem;
+        border-radius: 50%;
+        background-color: #fff;
+        cursor: pointer;
+    }
+    &__label:hover>&__icon::before {
+        top: -1.5rem;
+    }
+    &__label:hover>&__icon::after {
+        top: 1.5rem;
+    }
+    &__icon {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        &,
+        &::before,
+        &::after {
+            z-index: 2;
+            background-color: $color-primary;
+            display: block;
+            width: 5rem;
+            height: 0.3rem;
+        }
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            transition: all 0.2s;
+        }
+        &::before {
+            top: -1rem;
+        }
+        &::after {
+            top: 1rem;
+        }
+    }
+    //po zaskrtnuti checkbox vytvori krizek
+    &__checkbox:checked+&__label &__icon {
+        background-color: transparent;
+    }
+    &__checkbox:checked+&__label &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+    &__checkbox:checked+&__label &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+}

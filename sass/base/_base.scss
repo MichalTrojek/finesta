@@ -8,16 +8,29 @@
 
 html {
     font-size: 62.5%;
+    @include respond(1200) {
+        font-size: 50%;
+    }
+    @include respond(700) {
+        font-size: 40%;
+    }
+    @include respond(414) {
+        font-size: 30%;
+    }
 }
 
 body {
     font-family: $font-primary;
     font-weight: 300;
     line-height: 1.6;
+    background-color: grey;
 }
 
 .container {
     display: grid;
-    grid-template-columns: [full-start] 2fr [center-start] repeat( 10, [col-start] 1fr [col-end]) [center-end]2fr [full-end];
-    grid-template-rows: 85vh;
+    grid-template-columns: [full-start] 4fr [center-start] repeat( 10, [col-start] 1fr [col-end]) [center-end] 4fr [full-end];
+    @include respond(1300) {
+        grid-template-columns: [full-start] [center-start] repeat( 10, [col-start] 1fr [col-end]) [center-end] [full-end];
+    }
+    grid-template-rows: 100vh;
 }
