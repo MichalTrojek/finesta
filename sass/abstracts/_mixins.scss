@@ -1,0 +1,30 @@
+//MEDIA QUERY MANAGER
+
+/*
+ @include respond(tab-land) {
+        font-size: 56.25%;
+    }
+*/
+
+@mixin respond($breakpoint) {
+    @if $breakpoint==1300 {
+        @media (max-width: 81.25em) {
+            @content;
+        } //1400/16
+    }
+    @if $breakpoint==1200 {
+        @media (max-width: 75em) {
+            @content;
+        } //1400/16
+    }
+    @if $breakpoint==1000 {
+        @media (max-width: 62.5em) {
+            @content;
+        } //1400/16
+    }
+    @if $breakpoint==950 {
+        @media (max-width: 59.37em) {
+            @content;
+        } //1400/16
+    }
+}

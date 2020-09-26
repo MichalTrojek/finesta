@@ -1,0 +1,54 @@
+.nav {
+    min-height: 10rem;
+    z-index: 2;
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    @include respond(950) {
+        grid-column: 1 / span 2;
+        justify-self: start;
+    }
+    display: grid;
+    grid-template-columns: max-content max-content;
+    column-gap: 5rem;
+    align-items: center;
+    @include respond(1300) {
+        column-gap: 0;
+    }
+    &__logo {
+        padding: 1rem;
+        width: 20rem;
+        @include respond(950) {
+            width: 30rem;
+            padding-top: 5rem;
+            padding-left: 5rem;
+        }
+    }
+    &__list {
+        @include respond(950) {
+            display: none;
+        }
+        grid-column: 3/-1;
+        list-style: none;
+        display: grid;
+        grid-template-columns: repeat(7, max-content);
+        column-gap: 2rem;
+    }
+    $border-size: 0.4rem;
+    &__item {
+        padding-right: 1rem;
+        padding-left: 1rem;
+        text-align: center;
+        cursor: pointer;
+        border: $border-size solid transparent;
+    }
+    &__item:hover {
+        border-bottom: $border-size solid darkgoldenrod;
+    }
+    &__link:link,
+    &__link:visited {
+        outline: none;
+        color: #fff;
+        text-decoration: none;
+        font-size: 2rem;
+    }
+}

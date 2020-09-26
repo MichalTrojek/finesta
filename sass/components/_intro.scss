@@ -1,0 +1,47 @@
+.intro {
+    width: 60%;
+    z-index: 3;
+    grid-column: 2 / span 1;
+    grid-row: 4 / span 1;
+    align-self: end;
+    justify-items: center;
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5rem;
+    transform: translateY(30%);
+    @include respond(1000) {
+        transform: translateY(0);
+        width: 100vw;
+    }
+    line-height: 1;
+    padding: 3rem;
+    padding-right: 0;
+    &__card {
+        padding: 2rem;
+    }
+    &__heading {
+        text-align: start;
+        margin-left: 3rem;
+        color: $color-secondary;
+    }
+    &__text {
+        width: 65%;
+        color: $color-primary;
+        font-size: 1.6rem;
+        font-weight: 700;
+        font-family: $font-primary;
+        position: relative;
+        &::before {
+            content: "";
+            position: absolute;
+            top: -7rem;
+            left: 1rem;
+            display: block;
+            height: 6rem;
+            width: 0.6rem;
+            transform: skewx(-20deg);
+            background-color: $color-red;
+        }
+    }
+}
