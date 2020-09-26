@@ -1,1 +1,23 @@
-.whoarewe {}
+.whoarewe {
+    background-image: url(../img/whoarewe.png);
+    background-position: center;
+    background-size: cover;
+    grid-row: 3 / span 1;
+    grid-column: full-start/full-end;
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    justify-items: center;
+    &__header {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        align-self: start;
+        color: #fff;
+    }
+    &__video {
+        grid-column: 2 / span 1;
+        grid-row: 1 / span 1;
+        align-self: center;
+        width: 60%;
+        height: 60%;
+    }
+}

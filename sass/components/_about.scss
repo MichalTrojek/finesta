@@ -2,7 +2,7 @@
     grid-column: full-start / full-end;
     background-color: #ffffff;
     display: grid;
-    grid-template-columns: 1fr 5fr 5fr 1fr;
+    grid-template-columns: 2fr 4fr 4fr 2fr;
     grid-template-rows: 70vh;
     &__header {
         text-align: start;
@@ -14,17 +14,17 @@
     &__box {
         color: #616161;
         align-self: center;
+        justify-self: end;
         grid-row: 1 / span 1;
         grid-column: 2 / span 1;
-        width: 80%;
-        justify-self: end;
+        width: 70%;
     }
     &__img {
         grid-row: 1 / span 1;
         grid-column: 3 / span 1;
         width: 100%;
         height: auto;
-        max-width: 45rem;
+        max-width: 50rem;
         justify-self: start;
         align-self: center;
     }
