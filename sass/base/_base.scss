@@ -24,7 +24,6 @@ body {
     font-family: $font-primary;
     font-weight: 300;
     line-height: 1.6;
-    background-color: grey;
 }
 
 .container {
@@ -33,5 +32,5 @@ body {
     @include respond(1300) {
         grid-template-columns: [full-start] [center-start] repeat( 10, [col-start] 1fr [col-end]) [center-end] [full-end];
     }
-    grid-template-rows: 90vh;
+    grid-template-rows: 90vh repeat(2, 1fr);
 }

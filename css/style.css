@@ -25,13 +25,12 @@ html {
 body {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  line-height: 1.6;
-  background-color: grey; }
+  line-height: 1.6; }
 
 .container {
   display: grid;
   grid-template-columns: [full-start] 4fr [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] 4fr [full-end];
-  grid-template-rows: 90vh; }
+  grid-template-rows: 90vh repeat(2, 1fr); }
   @media only screen and (max-width: 81.25em) {
     .container {
       grid-template-columns: [full-start] [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] [full-end]; } }
