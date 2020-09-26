@@ -10,6 +10,7 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 5rem;
     transform: translateY(30%);
+    box-shadow: -0.588px 0.809px 76px rgba(0, 0, 0, 0.21);
     @include respond(1000) {
         transform: translateY(0);
         width: 100vw;
