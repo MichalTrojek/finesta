@@ -100,7 +100,7 @@ body {
     height: 100%; }
 
 .footer {
-  grid-row: 3 / span 1;
+  grid-row: 3 / span 2;
   grid-column: full-start/full-end;
   background: #423b48;
   background-image: url(../img/footer.png);
@@ -252,38 +252,73 @@ body {
   grid-template-rows: 60vh 40vh;
   row-gap: 10rem; }
   .contact h1 {
-    color: #fff; }
-  .contact__form {
-    grid-column: 2 / span 1;
-    display: grid;
-    grid-template-columns: max-content;
-    grid-template-rows: max-content 3rem max-content 3rem max-content 10rem 6rem;
-    justify-content: center;
-    row-gap: 2rem; }
-  .contact__name, .contact__email, .contact__area {
-    height: 100%;
+    color: #fff;
+    text-align: center; }
+
+.form {
+  grid-column: 2 / span 1;
+  display: grid;
+  grid-template-columns: max-content;
+  grid-template-rows: max-content 6rem 6rem 12rem 8rem;
+  justify-content: center;
+  justify-items: center;
+  align-content: center;
+  row-gap: 2rem; }
+  .form__input, .form__area {
     width: 55rem;
+    height: 100%;
     background-color: transparent;
-    outline: transparent; }
-  .contact__name, .contact__email {
-    padding: 10px;
+    outline: none; }
+  .form__group {
+    display: flex;
+    flex-direction: column; }
+  .form__input {
+    padding-left: 1rem;
     background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
     background-size: 2px 20%, 100% 2px, 2px 20%;
     background-position: bottom left, bottom center, bottom right;
     background-repeat: no-repeat;
     border: none;
-    color: #999; }
-  .contact__area {
-    border: 1px solid #fff; }
-  .contact__button {
+    color: #fff;
+    font-size: 1.6rem;
+    font-family: "Poppins", sans-serif; }
+  .form__label {
+    font-family: "Poppins", sans-serif;
+    font-size: 1.5rem;
+    padding-left: 0.9rem;
+    color: #fff;
+    transition: all 0.2s; }
+  .form__input:placeholder-shown + .form__label {
+    opacity: 1;
+    visibility: hidden;
+    transform: translateY(-3.1rem); }
+  .form__area {
+    padding: 10px;
+    color: #fff;
+    border: 1px solid #fff;
+    resize: none; }
+  .form__button {
     background-color: #ff952f;
+    color: #fff;
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
     text-transform: uppercase;
     width: 55rem;
     padding-top: 2rem;
     padding-bottom: 2rem;
     border: none;
     cursor: pointer;
-    border-radius: 3px; }
+    border-radius: 3px;
+    transition: all 0.2s;
+    box-shadow: -23.511px 32.361px 76px rgba(0, 0, 0, 0.21);
+    outline: transparent; }
+  .form__button:hover, .form__button:active {
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); }
+  .form__button:active, .form__button:focus {
+    transform: translateY(-0.1rem);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.2); }
 
 .info {
   grid-row: 2 / span 1;

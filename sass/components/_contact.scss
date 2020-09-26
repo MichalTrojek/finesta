@@ -5,38 +5,65 @@
     row-gap: 10rem;
     h1 {
         color: #fff;
+        text-align: center;
     }
-    &__form {
-        grid-column: 2 / span 1;
-        display: grid;
-        grid-template-columns: max-content;
-        grid-template-rows: max-content 3rem max-content 3rem max-content 10rem 6rem;
-        justify-content: center;
-        row-gap: 2rem;
-    }
-    &__name,
-    &__email,
+}
+
+.form {
+    grid-column: 2 / span 1;
+    display: grid;
+    grid-template-columns: max-content;
+    grid-template-rows: max-content 6rem 6rem 12rem 8rem;
+    justify-content: center;
+    justify-items: center;
+    align-content: center;
+    row-gap: 2rem;
+    &__input,
     &__area {
-        height: 100%;
         width: 55rem;
+        height: 100%;
         background-color: transparent;
-        outline: transparent;
+        outline: none;
     }
-    &__name,
-    &__email {
-        padding: 10px;
+    &__group {
+        display: flex;
+        flex-direction: column;
+    }
+    &__input {
+        padding-left: 1rem;
         background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
         background-size: 2px 20%, 100% 2px, 2px 20%;
         background-position: bottom left, bottom center, bottom right;
         background-repeat: no-repeat;
         border: none;
-        color: #999;
+        color: #fff;
+        font-size: 1.6rem;
+        font-family: $font-primary;
+    }
+    &__label {
+        font-family: $font-primary;
+        font-size: 1.5rem;
+        padding-left: 0.9rem;
+        color: #fff;
+        transition: all 0.2s;
+    }
+    &__input:placeholder-shown+&__label {
+        opacity: 1;
+        visibility: hidden;
+        transform: translateY(-3.1rem);
     }
     &__area {
+        padding: 10px;
+        color: #fff;
         border: 1px solid #fff;
+        resize: none;
     }
     &__button {
         background-color: #ff952f;
+        color: #fff;
+        font-size: 2rem;
+        font-family: $font-primary;
+        font-weight: 700;
         text-transform: uppercase;
         width: 55rem;
         padding-top: 2rem;
@@ -44,5 +71,18 @@
         border: none;
         cursor: pointer;
         border-radius: 3px;
+        transition: all 0.2s;
+        box-shadow: -23.511px 32.361px 76px rgba(0, 0, 0, 0.21);
+        outline: transparent;
+    }
+    &__button:hover,
+    &__button:active {
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 2rem rgba(#000, 0.2);
+    }
+    &__button:active,
+    &__button:focus {
+        transform: translateY(-0.1rem);
+        box-shadow: 0 0.5rem 1rem rgba(#000, 0.2);
     }
 }
