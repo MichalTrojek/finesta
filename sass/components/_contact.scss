@@ -5,7 +5,6 @@
     row-gap: 10rem;
     h1 {
         color: #fff;
-        text-align: center;
     }
 }
 
@@ -53,10 +52,12 @@
         transform: translateY(-3.1rem);
     }
     &__area {
+        font-family: $font-primary;
         padding: 10px;
         color: #fff;
         border: 1px solid #fff;
         resize: none;
+        font-size: 1.8rem;
     }
     &__button {
         background-color: #ff952f;

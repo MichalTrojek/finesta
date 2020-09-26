@@ -252,8 +252,7 @@ body {
   grid-template-rows: 60vh 40vh;
   row-gap: 10rem; }
   .contact h1 {
-    color: #fff;
-    text-align: center; }
+    color: #fff; }
 
 .form {
   grid-column: 2 / span 1;
@@ -293,10 +292,12 @@ body {
     visibility: hidden;
     transform: translateY(-3.1rem); }
   .form__area {
+    font-family: "Poppins", sans-serif;
     padding: 10px;
     color: #fff;
     border: 1px solid #fff;
-    resize: none; }
+    resize: none;
+    font-size: 1.8rem; }
   .form__button {
     background-color: #ff952f;
     color: #fff;
