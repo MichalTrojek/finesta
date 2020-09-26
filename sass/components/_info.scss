@@ -1,0 +1,24 @@
+.info {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    &__column {
+        font-size: 1.6rem;
+        display: flex;
+        flex-direction: column;
+        font-family: $font-primary;
+    }
+    &__small {
+        font-size: 1rem;
+    }
+    &__logo {
+        margin-top: 7rem;
+        width: 20rem;
+    }
+    a:link,
+    a:visited {
+        color: #fff;
+    }
+}

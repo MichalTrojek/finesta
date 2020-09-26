@@ -1,0 +1,8 @@
+.footer {
+    grid-row: 3 / span 1;
+    grid-column: full-start/full-end;
+    background: #423b48;
+    background-image: url(../img/footer.png);
+    background-size: cover;
+    background-position: top;
+}

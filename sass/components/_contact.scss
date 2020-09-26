@@ -1,0 +1,48 @@
+.contact {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-template-rows: 60vh 40vh;
+    row-gap: 10rem;
+    h1 {
+        color: #fff;
+    }
+    &__form {
+        grid-column: 2 / span 1;
+        display: grid;
+        grid-template-columns: max-content;
+        grid-template-rows: max-content 3rem max-content 3rem max-content 10rem 6rem;
+        justify-content: center;
+        row-gap: 2rem;
+    }
+    &__name,
+    &__email,
+    &__area {
+        height: 100%;
+        width: 55rem;
+        background-color: transparent;
+        outline: transparent;
+    }
+    &__name,
+    &__email {
+        padding: 10px;
+        background: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+        background-size: 2px 20%, 100% 2px, 2px 20%;
+        background-position: bottom left, bottom center, bottom right;
+        background-repeat: no-repeat;
+        border: none;
+        color: #999;
+    }
+    &__area {
+        border: 1px solid #fff;
+    }
+    &__button {
+        background-color: #ff952f;
+        text-transform: uppercase;
+        width: 55rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border: none;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+}
