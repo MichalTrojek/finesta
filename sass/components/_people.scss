@@ -1,1 +1,50 @@
-.people {}
+.people {
+    background-image: url(../img/people.png);
+    background-size: cover;
+    background-position: center;
+    grid-row: 4 / span 1;
+    grid-column: full-start/full-end;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    grid-template-columns: 1fr 10fr 1fr;
+    &__header {
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;
+        align-self: center;
+        justify-self: center;
+    }
+    &__cards {
+        grid-row: 2 / span 1;
+        grid-column: 2 / span 1;
+        display: grid;
+        grid-template-columns: repeat(6, minmax(25rem, 1fr));
+        @include respond(2000) {
+            grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+        }
+        justify-items: center;
+        align-items: center;
+    }
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 20rem;
+    &__image {
+        display: block;
+        border-radius: 50%;
+        max-height: 11rem;
+        max-width: 100%;
+        margin-bottom: 1rem;
+        filter: grayscale(100%);
+    }
+    &__header {
+        font-weight: 700;
+        color: $color-primary;
+    }
+    &__text {
+        text-align: center;
+        color: $color-primary;
+    }
+}

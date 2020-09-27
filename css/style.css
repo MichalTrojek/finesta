@@ -30,7 +30,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: [full-start] 4fr [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] 4fr [full-end];
-  grid-template-rows: 90vh 70vh 70vh 100vh; }
+  grid-template-rows: 90vh 70vh 70vh 70vh 100vh; }
   @media only screen and (max-width: 81.25em) {
     .container {
       grid-template-columns: [full-start] [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] [full-end]; } }
@@ -99,29 +99,22 @@ body {
     width: 100%;
     height: 90vh; }
 
-.whoarewe {
-  background-image: url(../img/whoarewe.png);
-  background-position: center;
-  background-size: cover;
-  grid-row: 3 / span 1;
+.footer {
+  grid-row: 5 / span 2;
   grid-column: full-start/full-end;
-  display: grid;
-  grid-template-columns: 1fr 10fr 1fr;
-  justify-items: center; }
-  .whoarewe__header {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-    align-self: start;
-    color: #fff; }
-  .whoarewe__video {
-    grid-column: 2 / span 1;
-    grid-row: 1 / span 1;
-    align-self: center;
-    width: 60%;
-    height: 60%; }
+  background: #423b48;
+  background-image: url(../img/footer.png);
+  background-size: cover;
+  background-position: top; }
+
+.services {
+  background-color: cyan; }
+
+.inprogress {
+  background-image: url(../img/inprogress.png); }
 
 .footer {
-  grid-row: 4 / span 2;
+  grid-row: 5 / span 2;
   grid-column: full-start/full-end;
   background: #423b48;
   background-image: url(../img/footer.png);
@@ -272,7 +265,7 @@ body {
   grid-column: full-start / full-end;
   background-color: #ffffff;
   display: grid;
-  grid-template-columns: 2fr 4fr 4fr 2fr;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-template-rows: 70vh; }
   .about__header {
     text-align: start; }
@@ -285,7 +278,7 @@ body {
     justify-self: end;
     grid-row: 1 / span 1;
     grid-column: 2 / span 1;
-    width: 70%; }
+    width: 50%; }
   .about__img {
     grid-row: 1 / span 1;
     grid-column: 3 / span 1;
@@ -389,3 +382,47 @@ body {
   .info a:link,
   .info a:visited {
     color: #fff; }
+
+.people {
+  background-image: url(../img/people.png);
+  background-size: cover;
+  background-position: center;
+  grid-row: 4 / span 1;
+  grid-column: full-start/full-end;
+  display: grid;
+  grid-template-rows: 1fr 5fr;
+  grid-template-columns: 1fr 10fr 1fr; }
+  .people__header {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+    align-self: center;
+    justify-self: center; }
+  .people__cards {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(25rem, 1fr));
+    justify-items: center;
+    align-items: center; }
+    @media only screen and (max-width: 125em) {
+      .people__cards {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); } }
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 20rem; }
+  .card__image {
+    display: block;
+    border-radius: 50%;
+    max-height: 11rem;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    filter: grayscale(100%); }
+  .card__header {
+    font-weight: 700;
+    color: #616161; }
+  .card__text {
+    text-align: center;
+    color: #616161; }
