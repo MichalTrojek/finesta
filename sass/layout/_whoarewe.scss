@@ -1,9 +1,9 @@
 .whoarewe {
+    grid-column: full-start/full-end;
+    grid-row: 3 / span 1;
     background-image: url(../img/whoarewe.png);
     background-position: center;
     background-size: cover;
-    grid-row: 3 / span 1;
-    grid-column: full-start/full-end;
     display: grid;
     grid-template-columns: 1fr 10fr 1fr;
     justify-items: center;

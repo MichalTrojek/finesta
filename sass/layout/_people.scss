@@ -2,8 +2,8 @@
     background-image: url(../img/people.png);
     background-size: cover;
     background-position: center;
-    grid-row: 4 / span 1;
     grid-column: full-start/full-end;
+    grid-row: 6 / span 1;
     display: grid;
     grid-template-rows: 1fr 5fr;
     grid-template-columns: 1fr 10fr 1fr;

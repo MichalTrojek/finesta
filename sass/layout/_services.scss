@@ -1,3 +1,5 @@
 .services {
+    grid-column: full-start/full-end;
+    grid-row: 4 / span 1;
     background-color: cyan;
 }
