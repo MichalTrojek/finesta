@@ -30,7 +30,7 @@ body {
 .container {
   display: grid;
   grid-template-columns: [full-start] 4fr [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] 4fr [full-end];
-  grid-template-rows: 90vh 80vh 70vh minmax(100vh, max-content) 70vh 90vh 100vh; }
+  grid-template-rows: 90vh 80vh 70vh max-content 70vh 90vh 100vh; }
   @media only screen and (max-width: 81.25em) {
     .container {
       grid-template-columns: [full-start] [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] [full-end]; } }
@@ -446,6 +446,8 @@ body {
   display: grid;
   grid-template-rows: 5rem 1fr;
   grid-template-columns: repeat(2, 1fr); }
+  .accordion:last-child {
+    padding-bottom: 5rem; }
   .accordion__header {
     grid-column: 1 / span 1;
     grid-row: 1 / span 1;
