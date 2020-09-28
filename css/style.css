@@ -31,13 +31,10 @@ body > * {
 .container {
   display: grid;
   grid-template-columns: [full-start] 4fr [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] 4fr [full-end];
-  grid-template-rows: 70vh 75vh 75vh max-content 75vh 90vh 100vh; }
+  grid-template-rows: 70vh 75vh 75vh max-content 75vh minmax(90vh, max-content) 100vh; }
   @media only screen and (max-width: 81.25em) {
     .container {
       grid-template-columns: [full-start] [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] [full-end]; } }
-  @media only screen and (min-width: 2000px) {
-    .container {
-      grid-template-rows: 70vh 70vh 70vh max-content 70vh 90vh 100vh; } }
 
 .heading-1 {
   font-family: "Playfair Display", serif;
@@ -71,9 +68,6 @@ body > * {
   grid-template-rows: max-content max-content max-content 1fr;
   row-gap: 6rem;
   color: #fff; }
-  @media only screen and (max-width: 62.5em) {
-    .header {
-      row-gap: 15rem; } }
   .header__heading {
     z-index: 2;
     grid-column: 2 / span 1;
@@ -98,23 +92,31 @@ body > * {
   grid-row: 2 / span 1;
   background-color: #ffffff;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); }
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  align-items: center; }
   .about__header {
     text-align: start; }
   .about__box {
     color: #616161;
-    align-self: center;
     justify-self: end;
     grid-row: 1 / span 1;
     grid-column: 2 / span 1;
-    width: 50%; }
+    width: 50%;
+    padding: 3rem; }
+    @media only screen and (max-width: 62.5em) {
+      .about__box {
+        justify-self: center;
+        width: 100%;
+        padding: 6rem; } }
   .about__img {
     grid-row: 1 / span 1;
     grid-column: 3 / span 1;
     max-width: 100%;
     max-height: 50rem;
-    justify-self: start;
-    align-self: center; }
+    justify-self: start; }
+    @media only screen and (max-width: 62.5em) {
+      .about__img {
+        justify-self: center; } }
 
 .services {
   padding: 3rem;
@@ -135,6 +137,9 @@ body > * {
   width: 60%;
   grid-row: 2 / span 1;
   grid-column: 1 / span 3; }
+  @media only screen and (max-width: 62.5em) {
+    .accordions {
+      width: 80%; } }
 
 .inprogress {
   grid-column: full-start/full-end;
@@ -143,7 +148,11 @@ body > * {
   background-position: center;
   display: grid;
   grid-template-rows: 15rem 1fr;
-  grid-template-columns: 1fr 3fr 1fr; }
+  grid-template-columns: 1fr 3fr 1fr;
+  padding: 3rem; }
+  @media only screen and (max-width: 62.5em) {
+    .inprogress {
+      grid-template-rows: 1fr max-content 1fr; } }
   .inprogress__header {
     justify-self: center;
     grid-row: 1 / span 1;
@@ -159,7 +168,8 @@ body > * {
   display: grid;
   grid-template-rows: 1fr 5fr;
   grid-template-columns: 1fr 10fr 1fr;
-  row-gap: 3rem; }
+  row-gap: 3rem;
+  padding: 3rem; }
   .people__header {
     grid-row: 1 / span 1;
     grid-column: 2 / span 1;
@@ -216,6 +226,10 @@ body > * {
     align-self: center;
     width: 60%;
     height: 75%; }
+    @media only screen and (max-width: 62.5em) {
+      .whoarewe__video {
+        width: 100%;
+        height: 75%; } }
 
 .footer {
   grid-column: full-start/full-end;
@@ -455,7 +469,8 @@ body > * {
     padding-left: 2rem;
     color: #8a7b96;
     user-select: none;
-    pointer-events: none; }
+    pointer-events: none;
+    white-space: nowrap; }
   .accordion__checkbox {
     display: none; }
   .accordion__checkbox:checked + .accordion__label .accordion__icon {
@@ -505,10 +520,13 @@ body > * {
   justify-self: center;
   position: relative;
   width: 100%;
-  height: 30rem;
+  height: 35rem;
   display: flex;
   justify-content: center;
   align-content: start; }
+  @media only screen and (max-width: 62.5em) {
+    .slideshow {
+      height: 50rem; } }
 
 .slide {
   display: none;
@@ -527,14 +545,15 @@ body > * {
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
-  user-select: none; }
+  user-select: none;
+  transform: scale(3); }
 
 .prev {
   border-radius: 3px 0 0 3px;
-  left: -5rem; }
+  left: -10rem; }
 
 .next {
-  right: -5rem;
+  right: -10rem;
   border-radius: 0 3px 3px 0; }
 
 .prev:hover,
@@ -590,6 +609,9 @@ body > * {
   display: grid;
   grid-template-rows: 6rem 13rem 10rem;
   padding: 2.5rem; }
+  @media only screen and (max-width: 62.5em) {
+    .project {
+      grid-template-rows: auto auto auto; } }
   .project__header {
     grid-row: 1 / span 1;
     color: #fff; }
@@ -598,6 +620,9 @@ body > * {
     grid-row: 2 / span 1;
     color: #fff;
     width: 100%; }
+    @media only screen and (max-width: 62.5em) {
+      .project__text {
+        line-height: 2; } }
   .project__box {
     grid-row: 3 / span 1;
     grid-column: 1 / span 1;

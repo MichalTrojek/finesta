@@ -12,9 +12,6 @@
     grid-template-rows: max-content max-content max-content 1fr;
     row-gap: 6rem;
     color: #fff;
-    @include respond(1000) {
-        row-gap: 15rem;
-    }
     &__heading {
         z-index: 2;
         grid-column: 2 / span 1;

@@ -15,6 +15,7 @@
         color: $color-secondary;
         user-select: none;
         pointer-events: none;
+        white-space: nowrap;
     }
     &__checkbox {
         display: none;
