@@ -1,0 +1,46 @@
+.project {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+    display: grid;
+    grid-template-rows: 8rem 10rem 10rem;
+    padding: 2rem;
+    &__header {
+        grid-row: 1 / span 1;
+        color: #fff;
+        font-weight: 700;
+        font-size: 5rem;
+    }
+    &__text {
+        text-align: start;
+        grid-row: 2 / span 1;
+        font-size: 1.5rem;
+        color: #fff;
+        width: 100%;
+    }
+    &__box {
+        grid-row: 3 / span 1;
+        grid-column: 1 / span 1;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-size: 2.6rem;
+    font-weight: 700;
+    padding: 2rem;
+    background-color: #f41731;
+    text-transform: uppercase;
+    &__icon {
+        width: 3rem;
+        height: 3rem;
+        margin-right: 1rem;
+    }
+}
+
+.item:nth-child(2) {
+    background-color: $color-secondary;
+}

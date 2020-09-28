@@ -3,7 +3,7 @@
     grid-column: full-start/full-end;
     grid-row: 4 / span 1;
     display: grid;
-    grid-template-columns: 1fr min-content 1fr;
+    grid-template-columns: 1fr 2fr 1fr;
     grid-template-rows: max-content 1fr;
     row-gap: 3rem;
     justify-items: center;

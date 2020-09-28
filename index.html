@@ -173,9 +173,142 @@
 
 
         </section>
-        <section class="inprogress"></section>
-        <section class="people">
+        <section class="inprogress">
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
 
+                // Next/previous controls
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                // Thumbnail image controls
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("slide");
+                    var dots = document.getElementsByClassName("indicators__dot");
+                    if (n > slides.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i].className.replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "grid";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+
+            <h1 class="inprogress__header heading-1">Now in progress</h1>
+
+            <div class="slideshow">
+                <div class="slide fade">
+                    <div class="project">
+                        <h3 class="project__header">Name of the project 1</h3>
+                        <p class="project__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magnam quae saepe recusandae at nobis unde exercitationem porro id eligendi alias laudantium quidem cumque eveniet, adipisci eum rerum numquam delectus? Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Suscipit maiores quas qui aliquid ea facilis impedit quod magni animi delectus natus autem eveniet quasi, dicta hic omnis sint! Eos, odio.
+                        </p>
+                        <div class="project__box">
+                            <div class="item">
+                                <svg class="item__icon">
+                                    <use xlink:href="img/sprite.svg#rocket"></use>
+                                </svg> start / 10.2.2018
+                            </div>
+                            <div class="item">
+                                <svg class="item__icon">
+                                    <use xlink:href="img/sprite.svg#flag"></use>
+                                </svg> end / 10.2.2023
+                            </div>
+                            <div class="item">
+                                <svg class="item__icon">
+                                     <use xlink:href="img/sprite.svg#money"></use>
+                                </svg> budget / h100 000 usb
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="project">
+                        <h3 class="project__header">Name of the project 2</h3>
+                        <p class="project__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magnam quae saepe recusandae at nobis unde exercitationem porro id eligendi alias laudantium quidem cumque eveniet, adipisci eum rerum numquam delectus? Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Suscipit maiores quas qui aliquid ea facilis impedit quod magni animi delectus natus autem eveniet quasi, dicta hic omnis sint! Eos, odio.
+                        </p>
+                        <div class="project__box">
+                            <div class="item">
+                                <svg class="item__icon">
+                                    <use xlink:href="img/sprite.svg#rocket"></use>
+                                </svg> start / 10.2.2018
+                            </div>
+                            <div class="item">
+                                <svg class="item__icon">
+                                    <use xlink:href="img/sprite.svg#flag"></use>
+                                </svg> end / 10.2.2023
+                            </div>
+                            <div class="item">
+                                <svg class="item__icon">
+                                     <use xlink:href="img/sprite.svg#money"></use>
+                                </svg> budget / h100 000 usb
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide fade">
+                    <div class="project">
+                        <h3 class="project__header">Name of the project 3</h3>
+                        <p class="project__text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magnam quae saepe recusandae at nobis unde exercitationem porro id eligendi alias laudantium quidem cumque eveniet, adipisci eum rerum numquam delectus? Lorem ipsum dolor sit amet consectetur
+                            adipisicing elit. Suscipit maiores quas qui aliquid ea facilis impedit quod magni animi delectus natus autem eveniet quasi, dicta hic omnis sint! Eos, odio.
+                        </p>
+                        <div class="project__box">
+                            <div class="item">
+                                <svg class="item__icon">
+                                    <use xlink:href="img/sprite.svg#rocket"></use>
+                                </svg> start / 10.2.2018
+                            </div>
+                            <div class="item">
+                                <svg class="item__icon">
+                                    <use xlink:href="img/sprite.svg#flag"></use>
+                                </svg> end / 10.2.2023
+                            </div>
+                            <div class="item">
+                                <svg class="item__icon">
+                                     <use xlink:href="img/sprite.svg#money"></use>
+                                </svg> budget / h100 000 usb
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                <div class="indicators">
+                    <a class="indicators__dot" onclick="currentSlide(1)"></a>
+                    <a class="indicators__dot" onclick="currentSlide(2)"></a>
+                    <a class="indicators__dot" onclick="currentSlide(3)"></a>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+        </section>
+        <section class="people">
             <h1 class="people__header heading-1">People</h1>
             <div class="people__cards">
                 <div class="card">
