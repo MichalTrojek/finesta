@@ -2,13 +2,12 @@
     grid-row: 2 / span 1;
     grid-column: 2 / span 1;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
+    align-items: flex-start;
     color: #fff;
     &__column {
-        font-size: 1.6rem;
         display: flex;
         flex-direction: column;
-        font-family: $font-primary;
     }
     &__small {
         font-size: 1rem;

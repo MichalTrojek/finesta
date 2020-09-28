@@ -24,16 +24,15 @@
     }
     //test
     &__heading {
+        font-size: 8rem;
         text-align: start;
         margin-left: 3rem;
         color: $color-secondary;
     }
     &__text {
-        width: 65%;
+        width: 75%;
         color: $color-primary;
-        font-size: 1.6rem;
-        font-weight: 700;
-        font-family: $font-primary;
+        font-weight: 550;
         position: relative;
         &::before {
             content: "";

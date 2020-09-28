@@ -7,29 +7,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Poppins:wght@300;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>Finesta</title>
-
 </head>
 
 <body>
     <div class="container">
-
-
         <div class="nav-btn">
             <input type="checkbox" class="nav-btn__checkbox" id="nav-btn-toggle">
             <label for="nav-btn-toggle" class="nav-btn__label"><span class="nav-btn__icon"></span></label>
         </div>
-
-        <header class="header">
+        <header class="header" id="home">
             <nav class="nav">
                 <img src="img/logo.png" alt="Finesta Logo." class="nav__logo">
                 <ul class="nav__list">
-                    <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">About us</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Who we are</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Our services</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">In progress</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">People</a></li>
-                    <li class="nav__item"><a href="#" class="nav__link">Contact us</a></li>
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About us</a></li>
+                    <li class="nav__item"><a href="#whoarewe" class="nav__link">Who we are</a></li>
+                    <li class="nav__item"><a href="#services" class="nav__link">Our services</a></li>
+                    <li class="nav__item"><a href="#progress" class="nav__link">In progress</a></li>
+                    <li class="nav__item"><a href="#people" class="nav__link">People</a></li>
+                    <li class="nav__item"><a href="#contact" class="nav__link">Contact us</a></li>
                 </ul>
             </nav>
 
@@ -56,9 +52,7 @@
 
 
         </header>
-
-
-        <section class="about">
+        <section class="about" id="about">
             <div class="about__box">
                 <h1 class="about__header heading-1">About Us</h1>
                 <p class="about__text mg-b-sm">
@@ -77,16 +71,16 @@
 
 
         </section>
-        <section class="whoarewe">
+        <section class="whoarewe" id="whoarewe">
             <h1 class="whoarewe__header heading-1">Who we are?</h1>
             <iframe class="whoarewe__video" src="https://www.youtube.com/embed/FzMjxKStp5E">
             </iframe>
         </section>
-        <section class='services'>
+        <section class='services' id="services">
             <img src="img/ourservices.png" alt="" class="services__heading">
             <div class="accordions">
                 <div class="accordion">
-                    <div class="accordion__header">Oil &amp; Gas</div>
+                    <h2 class="accordion__header heading-2">Oil &amp; Gas</h2>
                     <input type="checkbox" id="accordion-toggle-1" class="accordion__checkbox">
                     <label for="accordion-toggle-1" class="accordion__label">
                         <svg class="accordion__icon">
@@ -103,7 +97,8 @@
                     </div>
                 </div>
                 <div class="accordion">
-                    <div class="accordion__header">Pipeline Transport</div>
+                    <h2 class="accordion__header heading-2">Pipeline Transport</h2>
+
                     <input type="checkbox" id="accordion-toggle-2" class="accordion__checkbox">
                     <label for="accordion-toggle-2" class="accordion__label">
                     <svg class="accordion__icon">
@@ -120,7 +115,7 @@
                     </div>
                 </div>
                 <div class="accordion">
-                    <div class="accordion__header">Energy Sector</div>
+                    <h2 class="accordion__header heading-2">Energy Sector</h2>
                     <input type="checkbox" id="accordion-toggle-3" class="accordion__checkbox" checked="checked">
                     <label for="accordion-toggle-3" class="accordion__label">
                     <svg class="accordion__icon">
@@ -137,7 +132,7 @@
                     </div>
                 </div>
                 <div class="accordion">
-                    <div class="accordion__header">Investment Management</div>
+                    <h2 class="accordion__header heading-2">Investment Management</h2>
                     <input type="checkbox" id="accordion-toggle-4" class="accordion__checkbox">
                     <label for="accordion-toggle-4" class="accordion__label">
                     <svg class="accordion__icon">
@@ -145,7 +140,7 @@
                     </svg>
                     </label>
                     <div class="accordion__content">
-                        <img src="/img/accordion_image.png" alt="Energy sector" class="accordion__img">
+                        <img src="/img/accordion_image.png" alt="Investment Management" class="accordion__img">
                         <p class="accordion__text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea exercitationem sed excepturi possimus, libero, voluptates esse soluta dolores aspernatur vitae incidunt perferendis ipsam rerum voluptate! Minus vel fuga suscipit ad! Lorem ipsum dolor, sit amet
                             consectetur adipisicing elit. Aliquid, nemo quod aliquam amet magni consequatur reiciendis nostrum, impedit ad enim officia quaerat, perferendis corporis esse hic obcaecati. Veritatis, inventore nihil. Lorem ipsum dolor sit
@@ -154,7 +149,8 @@
                     </div>
                 </div>
                 <div class="accordion">
-                    <div class="accordion__header">Real Estate</div>
+                    <h2 class="accordion__header heading-2">Real Estate</h2>
+
                     <input type="checkbox" id="accordion-toggle-5" class="accordion__checkbox">
                     <label for="accordion-toggle-5" class="accordion__label">
                     <svg class="accordion__icon">
@@ -171,18 +167,13 @@
                     </div>
                 </div>
             </div>
-
-
         </section>
-        <section class="inprogress">
+        <section class="inprogress" id="progress">
             <h1 class="inprogress__header heading-1">Now in progress</h1>
             <div class="slideshow">
-
-
-
                 <div class="slide fade">
                     <div class="project">
-                        <h3 class="project__header">Name of the project 1</h3>
+                        <h2 class="project__header heading-2">Name of the project 1</h2>
                         <p class="project__text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magnam quae saepe recusandae at nobis unde exercitationem porro id eligendi alias laudantium quidem cumque eveniet, adipisci eum rerum numquam delectus? Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Suscipit maiores quas qui aliquid ea facilis impedit quod magni animi delectus natus autem eveniet quasi, dicta hic omnis sint! Eos, odio.
@@ -201,14 +192,14 @@
                             <div class="item">
                                 <svg class="item__icon">
                                      <use xlink:href="img/sprite.svg#money"></use>
-                                </svg> budget / h100 000 usb
+                                </svg> budget / 100 000 USD
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="slide fade">
                     <div class="project">
-                        <h3 class="project__header">Name of the project 2</h3>
+                        <h2 class="project__header heading-2">Name of the project 2</h2>
                         <p class="project__text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magnam quae saepe recusandae at nobis unde exercitationem porro id eligendi alias laudantium quidem cumque eveniet, adipisci eum rerum numquam delectus? Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Suscipit maiores quas qui aliquid ea facilis impedit quod magni animi delectus natus autem eveniet quasi, dicta hic omnis sint! Eos, odio.
@@ -227,14 +218,14 @@
                             <div class="item">
                                 <svg class="item__icon">
                                      <use xlink:href="img/sprite.svg#money"></use>
-                                </svg> budget / h100 000 usb
+                                </svg> budget / 100 000 USD
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="slide fade">
                     <div class="project">
-                        <h3 class="project__header">Name of the project 3</h3>
+                        <h2 class="project__header heading-2">Name of the project 3</h2>
                         <p class="project__text">
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit magnam quae saepe recusandae at nobis unde exercitationem porro id eligendi alias laudantium quidem cumque eveniet, adipisci eum rerum numquam delectus? Lorem ipsum dolor sit amet consectetur
                             adipisicing elit. Suscipit maiores quas qui aliquid ea facilis impedit quod magni animi delectus natus autem eveniet quasi, dicta hic omnis sint! Eos, odio.
@@ -253,7 +244,7 @@
                             <div class="item">
                                 <svg class="item__icon">
                                      <use xlink:href="img/sprite.svg#money"></use>
-                                </svg> budget / h100 000 usb
+                                </svg> budget / 100 000 USD
                             </div>
                         </div>
                     </div>
@@ -270,89 +261,89 @@
 
             </div>
         </section>
-        <section class="people">
+        <section class="people" id="people">
             <h1 class="people__header heading-1">People</h1>
             <div class="people__cards">
                 <div class="card">
                     <img src="img/ppl1.png" alt="Lakehal Younes" class="card__image">
-                    <h3 class="carc__header">Lakehal Younes</h3>
+                    <h3 class="card__header heading-3">Lakehal Younes</h3>
                     <p class="card__text">
                         Chairman and CEO<br>Founder of Finesta Group<br>Majority Shareholder
                     </p>
                 </div>
                 <div class="card">
                     <img src="img/ppl2.png" alt="Dominika Kamarytova" class="card__image">
-                    <h3 class="carc__header">Dominika Kamarytová</h3>
+                    <h3 class="card__header heading-3">Dominika Kamarytová</h3>
                     <p class="card__text">
                         Personal assistent to CEO
                     </p>
                 </div>
                 <div class="card">
                     <img src="img/ppl3.png" alt="Jiri Novak" class="card__image">
-                    <h3 class="carc__header">Jiří Novák</h3>
+                    <h3 class="card__header heading-3">Jiří Novák</h3>
                     <p class="card__text">
                         Member of the Board
                     </p>
                 </div>
                 <div class="card">
                     <img src="img/ppl4.png" alt="Isam H. Nassrullah" class="card__image">
-                    <h3 class="carc__header">Isam H.Nassrullah</h3>
+                    <h3 class="card__header heading-3">Isam H.Nassrullah</h3>
                     <p class="card__text">
                         Member of the Board<br>Iraqi Branch Manager
                     </p>
                 </div>
                 <div class="card">
                     <img src="img/ppl5.png" alt="Lukas Foral" class="card__image">
-                    <h3 class="carc__header">Lukas Foral</h3>
+                    <h3 class="card__header heading-3">Lukas Foral</h3>
                     <p class="card__text">
                         Member of the Board<br>Sales Managerh
                     </p>
                 </div>
                 <div class="card">
                     <img src="img/ppl6.png" alt="Marek Goldbach" class="card__image">
-                    <h3 class="carc__header">Marek Goldbach</h3>
+                    <h3 class="card__header heading-3">Marek Goldbach</h3>
                     <p class="card__text">
                         Member of the Board<br>Chief Technology Officer
                     </p>
                 </div>
                 <div class="card">
                     <img src="img/ppl7.png" alt="Granit Rexha" class="card__image">
-                    <h3 class="carc__header">Granit Rexha</h3>
+                    <h3 class="card__header heading-3">Granit Rexha</h3>
                     <p class="card__text">
                         Member of the Board<br>Head of Investment Committee
                     </p>
                 </div>
                 <div class="card">
                     <img src="img/ppl8.png" alt="Benjamin Bisaku" class="card__image">
-                    <h3 class="carc__header">Benjamin Bisaku</h3>
+                    <h3 class="card__header heading-3">Benjamin Bisaku</h3>
                     <p class="card__text">
                         Member of the Board
                     </p>
                 </div>
                 <div class="card">
                     <img src="img/ppl9.png" alt="Jiri Novak" class="card__image">
-                    <h3 class="carc__header">Jiří Novák</h3>
+                    <h3 class="card__header heading-3">Jiří Novák</h3>
                     <p class="card__text">
                         Member of the Board<br> Head of Business Development
                     </p>
                 </div>
                 <div class="card">
                     <img src="img/ppl10.png" alt="Thomas Blaho" class="card__image">
-                    <h3 class="carc__header">Thomas Blaho</h3>
+                    <h3 class="card__header heading-3">Thomas Blaho</h3>
                     <p class="card__text">
                         Member of the Board<br> Head of Commodity Trading
                     </p>
                 </div>
                 <div class="card">
                     <img src="img/ppl11.png" alt="Frantisek Dubovsky" class="card__image">
-                    <h3 class="carc__header">Frantisek Dubovský</h3>
+                    <h3 class="card__header heading-3">Frantisek Dubovský</h3>
                     <p class="card__text">
                         Member of the Board<br>Oil &amp; Gas Managing Director
                     </p>
                 </div>
                 <div class="card">
                     <img src="img/ppl12.png" alt="Lubomil Pospisil" class="card__image">
-                    <h3 class="carc__header">Lubomil Pospíšil</h3>
+                    <h3 class="card__header heading-3">Lubomil Pospíšil</h3>
                     <p class="card__text">
                         Member of the Board<br>Chief Advisor
                     </p>
@@ -361,27 +352,23 @@
             </div>
 
         </section>
-
-
-
         <footer class="footer">
             <section class="contact" id="contact">
                 <form action="#" class="form" id="contact-form">
                     <h1 class="heading-1">Contact us</h1>
                     <div class="form__group">
-
                         <input type="text" class="form__input" id="name-input" placeholder="Name">
                         <label class=" form__label " for="name-input ">Name</label>
                     </div>
                     <div class="form__group ">
 
                         <input type="text " class="form__input " id="email-input " placeholder="Email ">
-                        <label class=" form__label " for="email-input ">Email </label>
+                        <label class=" form__label " for="email-input ">Email</label>
                     </div>
 
 
                     <textarea rows="4 " cols="50 " name="comment " form="form-form " class="form__area " placeholder="Message "></textarea>
-                    <button class="form__button ">send a message</button>
+                    <button type="submit" class="form__button">send a message</button>
                 </form>
 
                 <div class="info ">
@@ -426,23 +413,8 @@
 
             </section>
         </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     </div>
-    <script src="js/slidershow.js"></script>
+    <script src="js/slideshow.js"></script>
 </body>
 
 </html>

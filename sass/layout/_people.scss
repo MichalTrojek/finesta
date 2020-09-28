@@ -7,9 +7,11 @@
     display: grid;
     grid-template-rows: 1fr 5fr;
     grid-template-columns: 1fr 10fr 1fr;
+    row-gap: 3rem;
     &__header {
         grid-row: 1 / span 1;
         grid-column: 2 / span 1;
+        color: $color-primary;
         align-self: center;
         justify-self: center;
     }
@@ -22,7 +24,7 @@
             grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         }
         justify-items: center;
-        align-items: center;
+        align-items: start;
     }
 }
 
@@ -34,13 +36,12 @@
     &__image {
         display: block;
         border-radius: 50%;
-        max-height: 11rem;
+        max-height: 15rem;
         max-width: 100%;
         margin-bottom: 1rem;
         filter: grayscale(100%);
     }
     &__header {
-        font-weight: 700;
         color: $color-primary;
     }
     &__text {

@@ -22,15 +22,16 @@ html {
     html {
       font-size: 30%; } }
 
-body {
+body > * {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
-  line-height: 1.6; }
+  line-height: 1.6;
+  font-size: 1.6rem; }
 
 .container {
   display: grid;
   grid-template-columns: [full-start] 4fr [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] 4fr [full-end];
-  grid-template-rows: 90vh 80vh 70vh max-content 70vh 90vh 100vh; }
+  grid-template-rows: 70vh 70vh 70vh max-content 70vh 80vh 100vh; }
   @media only screen and (max-width: 81.25em) {
     .container {
       grid-template-columns: [full-start] [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] [full-end]; } }
@@ -38,16 +39,16 @@ body {
 .heading-1 {
   font-family: "Playfair Display", serif;
   font-weight: 900;
-  font-size: 10rem; }
+  font-size: 6.4rem; }
 
 .heading-2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 8rem; }
+  font-size: 3.2rem; }
 
 .heading-3 {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 2rem; }
 
 .mg-b-sm {
@@ -75,7 +76,6 @@ body {
     grid-column: 2 / span 1;
     text-align: center;
     width: 50%;
-    line-height: 1;
     text-shadow: 3px 3px 0px #000; }
     .header__heading span {
       color: #f40e29; }
@@ -83,22 +83,12 @@ body {
     z-index: 2;
     grid-column: 2 / span 1;
     grid-row: 3 / span 1;
-    font-size: 2rem;
     text-align: center;
-    align-self: start;
-    color: #fff; }
+    align-self: start; }
     @media only screen and (max-width: 25.875em) {
       .header__text {
         font-size: 2.5rem;
         padding: 0 1rem 0 1rem; } }
-  .header__overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    background-color: rgba(29, 14, 12, 0.239216);
-    width: 100%;
-    height: 90vh; }
 
 .about {
   grid-column: full-start/full-end;
@@ -108,9 +98,6 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); }
   .about__header {
     text-align: start; }
-  .about__text {
-    font-family: "Poppins", sans-serif;
-    font-size: 1.6rem; }
   .about__box {
     color: #616161;
     align-self: center;
@@ -150,10 +137,9 @@ body {
   grid-column: full-start/full-end;
   grid-row: 5 / span 1;
   background-image: url(../img/inprogress.png);
-  background-size: cover;
   background-position: center;
   display: grid;
-  grid-template-rows: 20rem 1fr;
+  grid-template-rows: 15rem 1fr;
   grid-template-columns: 1fr 3fr 1fr; }
   .inprogress__header {
     justify-self: center;
@@ -169,10 +155,12 @@ body {
   grid-row: 6 / span 1;
   display: grid;
   grid-template-rows: 1fr 5fr;
-  grid-template-columns: 1fr 10fr 1fr; }
+  grid-template-columns: 1fr 10fr 1fr;
+  row-gap: 3rem; }
   .people__header {
     grid-row: 1 / span 1;
     grid-column: 2 / span 1;
+    color: #616161;
     align-self: center;
     justify-self: center; }
   .people__cards {
@@ -181,7 +169,7 @@ body {
     display: grid;
     grid-template-columns: repeat(6, minmax(25rem, 1fr));
     justify-items: center;
-    align-items: center; }
+    align-items: start; }
     @media only screen and (max-width: 125em) {
       .people__cards {
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); } }
@@ -194,12 +182,11 @@ body {
   .card__image {
     display: block;
     border-radius: 50%;
-    max-height: 11rem;
+    max-height: 15rem;
     max-width: 100%;
     margin-bottom: 1rem;
     filter: grayscale(100%); }
   .card__header {
-    font-weight: 700;
     color: #616161; }
   .card__text {
     text-align: center;
@@ -225,7 +212,7 @@ body {
     grid-row: 2 / span 1;
     align-self: center;
     width: 60%;
-    height: 60%; }
+    height: 75%; }
 
 .footer {
   grid-column: full-start/full-end;
@@ -430,15 +417,14 @@ body {
   .intro__card {
     padding: 2rem; }
   .intro__heading {
+    font-size: 8rem;
     text-align: start;
     margin-left: 3rem;
     color: #8a7b96; }
   .intro__text {
-    width: 65%;
+    width: 75%;
     color: #616161;
-    font-size: 1.6rem;
-    font-weight: 700;
-    font-family: "Poppins", sans-serif;
+    font-weight: 550;
     position: relative; }
     .intro__text::before {
       content: "";
@@ -464,9 +450,7 @@ body {
     justify-self: start;
     align-self: center;
     padding-left: 2rem;
-    color: #8a7b96;
-    font-size: 3rem;
-    font-weight: 700; }
+    color: #8a7b96; }
   .accordion__checkbox {
     display: none; }
   .accordion__checkbox:checked + .accordion__label .accordion__icon {
@@ -508,7 +492,6 @@ body {
     max-height: 20rem;
     max-width: 100%; }
   .accordion__text {
-    font-size: 1.6rem;
     text-align: start; }
 
 .slideshow {
@@ -557,7 +540,7 @@ body {
 .indicators {
   z-index: 99;
   position: absolute;
-  bottom: -5rem;
+  bottom: -10rem;
   display: flex;
   left: 50%;
   transform: translate(-50%); }
@@ -600,30 +583,26 @@ body {
   grid-row: 1 / span 1;
   grid-column: 1 / span 1;
   display: grid;
-  grid-template-rows: 8rem 10rem 10rem;
-  padding: 2rem; }
+  grid-template-rows: 6rem 13rem 10rem;
+  padding: 2.5rem; }
   .project__header {
     grid-row: 1 / span 1;
-    color: #fff;
-    font-weight: 700;
-    font-size: 5rem; }
+    color: #fff; }
   .project__text {
     text-align: start;
     grid-row: 2 / span 1;
-    font-size: 1.5rem;
     color: #fff;
     width: 100%; }
   .project__box {
     grid-row: 3 / span 1;
     grid-column: 1 / span 1;
     display: flex;
-    align-items: center; }
+    align-items: end; }
 
 .item {
   display: flex;
   align-items: center;
   color: #fff;
-  font-size: 2.6rem;
   font-weight: 700;
   padding: 2rem;
   background-color: #f41731;
@@ -640,13 +619,12 @@ body {
   grid-row: 2 / span 1;
   grid-column: 2 / span 1;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  align-items: flex-start;
   color: #fff; }
   .info__column {
-    font-size: 1.6rem;
     display: flex;
-    flex-direction: column;
-    font-family: "Poppins", sans-serif; }
+    flex-direction: column; }
   .info__small {
     font-size: 1rem; }
   .info__logo {
