@@ -31,10 +31,13 @@ body > * {
 .container {
   display: grid;
   grid-template-columns: [full-start] 4fr [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] 4fr [full-end];
-  grid-template-rows: 70vh 70vh 70vh max-content 70vh 80vh 100vh; }
+  grid-template-rows: 70vh 75vh 75vh max-content 75vh 90vh 100vh; }
   @media only screen and (max-width: 81.25em) {
     .container {
       grid-template-columns: [full-start] [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] [full-end]; } }
+  @media only screen and (min-width: 2000px) {
+    .container {
+      grid-template-rows: 70vh 70vh 70vh max-content 70vh 90vh 100vh; } }
 
 .heading-1 {
   font-family: "Playfair Display", serif;
