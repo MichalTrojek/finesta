@@ -450,7 +450,9 @@ body > * {
     justify-self: start;
     align-self: center;
     padding-left: 2rem;
-    color: #8a7b96; }
+    color: #8a7b96;
+    user-select: none;
+    pointer-events: none; }
   .accordion__checkbox {
     display: none; }
   .accordion__checkbox:checked + .accordion__label .accordion__icon {

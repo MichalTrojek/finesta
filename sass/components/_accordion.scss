@@ -13,6 +13,8 @@
         align-self: center;
         padding-left: 2rem;
         color: $color-secondary;
+        user-select: none;
+        pointer-events: none;
     }
     &__checkbox {
         display: none;
