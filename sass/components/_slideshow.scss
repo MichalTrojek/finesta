@@ -26,7 +26,10 @@
     top: 50%;
     width: auto;
     margin-top: -22px;
-    padding: 16px;
+    padding: 1rem;
+    @include respond(1100) {
+        padding: 0;
+    }
     color: white;
     font-weight: bold;
     font-size: 18px;
@@ -38,11 +41,17 @@
 .prev {
     border-radius: 3px 0 0 3px;
     left: -10rem;
+    @include respond(1100) {
+        left: -5rem;
+    }
 }
 
 .next {
-    right: -10rem;
     border-radius: 0 3px 3px 0;
+    right: -10rem;
+    @include respond(1100) {
+        right: -5rem;
+    }
 }
 
 .prev:hover,

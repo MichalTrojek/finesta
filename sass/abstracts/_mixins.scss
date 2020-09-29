@@ -13,34 +13,54 @@
             @content;
         }
     }
+    @if $breakpoint==1920 {
+        @media only screen and (max-width: 120em) {
+            @content;
+        }
+    }
     @if $breakpoint==1300 {
         @media only screen and (max-width: 81.25em) {
             @content;
-        } //1400/16
+        }
     }
     @if $breakpoint==1200 {
         @media only screen and (max-width: 75em) {
             @content;
-        } //1400/16
+        }
+    }
+    @if $breakpoint==1100 {
+        @media only screen and (max-width: 68.75em) {
+            @content;
+        }
     }
     @if $breakpoint==1000 {
         @media only screen and (max-width: 62.5em) {
             @content;
-        } //1400/16
+        }
     }
     @if $breakpoint==950 {
         @media only screen and (max-width: 59.37em) {
             @content;
-        } //1400/16
+        }
+    }
+    @if $breakpoint==850 {
+        @media only screen and (max-width: 53.125em) {
+            @content;
+        }
     }
     @if $breakpoint==700 {
         @media only screen and (max-width: 43.75em) {
             @content;
-        } //1400/16
+        }
+    }
+    @if $breakpoint==500 {
+        @media only screen and (max-width: 31.25em) {
+            @content;
+        }
     }
     @if $breakpoint==414 {
         @media only screen and (max-width: 25.875em) {
             @content;
-        } //1400/16
+        }
     }
 }
