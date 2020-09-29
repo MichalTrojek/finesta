@@ -16,6 +16,7 @@
     transform: translateY(40%);
     box-shadow: -0.588px 0.809px 76px rgba(0, 0, 0, 0.21);
     @include respond(1000) {
+        position: relative;
         transform: translateY(0);
         grid-column: 1/-1;
         width: 100%;
