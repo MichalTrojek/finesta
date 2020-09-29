@@ -7,7 +7,7 @@
         display: none;
     }
     &__label {
-        z-index: 99;
+        z-index: 1000;
         position: fixed;
         top: 4.5rem;
         right: 5rem;
@@ -62,5 +62,64 @@
     &__checkbox:checked+&__label &__icon::after {
         top: 0;
         transform: rotate(-135deg);
+    }
+    //po zaskrtnuti se zapne menu
+    &__checkbox:checked~.background {
+        transform: scale(100);
+    }
+    &__checkbox:checked~.menu {
+        opacity: 1;
+        position: absolute;
+        top: 75%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.background {
+    height: 6rem;
+    width: 6rem;
+    border-radius: 50%;
+    position: fixed;
+    top: 6.5rem;
+    right: 6.5rem;
+    z-index: 999;
+    background-image: radial-gradient($color-primary, $color-secondary);
+    transition: all 0.4s cubic-bezier(0.83, 0, 0.17, 1);
+}
+
+.menu {
+    list-style: none;
+    text-align: left;
+    height: 100vh;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.4s;
+    &__item {
+        margin: 1rem;
+    }
+    &__link {
+        &:link,
+        &:visited {
+            display: inline-block;
+            font-size: 3rem;
+            font-weight: 300;
+            color: #fff;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: all 0.4s;
+            background-size: 240%;
+            background-image: linear-gradient( 120deg, transparent 0%, transparent 50%, #fff 50%);
+            &:hover,
+            &:active {
+                background-position: 100%;
+                color: $color-primary;
+                transform: translateX(1rem);
+            }
+        }
     }
 }
