@@ -32,6 +32,9 @@
         @include respond(950) {
             width: 90%;
         }
+        @include respond(400) {
+            width: 95%;
+        }
         span {
             color: $color-red;
         }
@@ -49,6 +52,10 @@
             padding: 0 0.2rem 0 0.2rem;
             font-size: 1.7rem;
             line-height: 2.5;
+        }
+        @include respond(400) {
+            font-size: 1.6rem;
+            line-height: 1.6;
         }
     }
 }

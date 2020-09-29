@@ -23,6 +23,9 @@
     }
     line-height: 1;
     padding: 3rem;
+    @include respond(400) {
+        padding: 0rem;
+    }
     &__card {
         padding: 2rem;
         @include respond(500) {

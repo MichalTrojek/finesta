@@ -26,6 +26,7 @@
         grid-column: 2 / span 1;
         color: #fff;
         align-self: end;
+        white-space: nowrap;
         @include respond(1920) {
             row-gap: 5rem;
             align-self: start;
@@ -35,6 +36,7 @@
         }
         @include respond(500) {
             align-self: start;
+            font-size: 5rem;
         }
     }
 }

@@ -67,6 +67,9 @@
     z-index: 99;
     position: absolute;
     bottom: -10rem;
+    @include respond(400) {
+        bottom: -6rem;
+    }
     display: flex;
     left: 50%;
     transform: translate(-50%);

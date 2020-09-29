@@ -22,4 +22,7 @@
     @include respond(1000) {
         width: 90%;
     }
+    @include respond(400) {
+        width: 95%;
+    }
 }

@@ -36,5 +36,5 @@ body {
         grid-template-columns: [full-start] [center-start] repeat( 10, [col-start] 1fr [col-end]) [center-end] [full-end];
     }
     //grid-template-rows: 70vh 75vh 75vh max-content 75vh minmax(90vh, max-content) 100vh;
-    grid-template-rows: minmax(70vh, max-content) minmax(75vh, max-content) minmax( 75vh, max-content) max-content minmax(75vh, max-content) minmax(90vh, max-content) 100vh;
+    grid-template-rows: minmax(70vh, max-content) minmax(75vh, max-content) minmax( 75vh, max-content) max-content minmax(75vh, max-content) minmax(90vh, max-content) max-content;
 }
