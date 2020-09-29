@@ -188,7 +188,8 @@ body > * {
       row-gap: 0; } }
   @media only screen and (max-width: 62.5em) {
     .inprogress {
-      grid-template-rows: 1fr max-content 1fr; } }
+      grid-template-rows: 1fr max-content 1fr;
+      grid-template-columns: 1fr; } }
   .inprogress__header {
     justify-self: center;
     grid-row: 1 / span 1;
@@ -201,7 +202,10 @@ body > * {
         align-self: start; } }
     @media only screen and (max-width: 75em) {
       .inprogress__header {
-        align-self: end; } }
+        align-self: center; } }
+    @media only screen and (max-width: 31.25em) {
+      .inprogress__header {
+        align-self: start; } }
 
 .people {
   background-image: url(../img/people.png);
@@ -619,6 +623,10 @@ body > * {
     .prev,
     .next {
       padding: 0; } }
+  @media only screen and (max-width: 31.25em) {
+    .prev,
+    .next {
+      display: none; } }
 
 .prev {
   border-radius: 3px 0 0 3px;
@@ -650,11 +658,16 @@ body > * {
     cursor: pointer;
     height: 15px;
     width: 15px;
-    margin: 0 2px;
+    margin: 0 0.2rem;
     background-color: #fff;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease; }
+    @media only screen and (max-width: 31.25em) {
+      .indicators__dot {
+        margin: 0 5rem;
+        height: 4rem;
+        width: 4rem; } }
   .indicators__dot:nth-child(2) {
     margin: 0 1rem 0 1rem; }
   .indicators__dot:hover {
@@ -685,7 +698,7 @@ body > * {
   grid-row: 1 / span 1;
   grid-column: 1 / span 1;
   display: grid;
-  grid-template-rows: 6rem 13rem 10rem;
+  grid-template-rows: 6rem 16rem 9rem;
   padding: 2.5rem; }
   @media only screen and (max-width: 62.5em) {
     .project {
@@ -715,10 +728,15 @@ body > * {
   padding: 2rem;
   background-color: #f41731;
   text-transform: uppercase; }
+  @media only screen and (max-width: 81.25em) {
+    .item {
+      flex-direction: column;
+      text-align: center;
+      padding: 1rem; } }
   .item__icon {
     width: 3rem;
     height: 3rem;
-    margin-right: 1rem; }
+    margin: 0.7rem; }
 
 .item:nth-child(2) {
   background-color: #8a7b96; }

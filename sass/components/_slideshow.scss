@@ -36,6 +36,9 @@
     transition: 0.6s ease;
     user-select: none;
     transform: scale(3);
+    @include respond(500) {
+        display: none;
+    }
 }
 
 .prev {
@@ -71,7 +74,12 @@
         cursor: pointer;
         height: 15px;
         width: 15px;
-        margin: 0 2px;
+        margin: 0 0.2rem;
+        @include respond(500) {
+            margin: 0 5rem;
+            height: 4rem;
+            width: 4rem;
+        }
         background-color: #fff;
         border-radius: 50%;
         display: inline-block;

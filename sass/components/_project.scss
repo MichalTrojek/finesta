@@ -2,7 +2,7 @@
     grid-row: 1 / span 1;
     grid-column: 1 / span 1;
     display: grid;
-    grid-template-rows: 6rem 13rem 10rem;
+    grid-template-rows: 6rem 16rem 9rem;
     @include respond(1000) {
         grid-template-rows: auto auto auto;
     }
@@ -36,10 +36,15 @@
     padding: 2rem;
     background-color: #f41731;
     text-transform: uppercase;
+    @include respond(1300) {
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem;
+    }
     &__icon {
         width: 3rem;
         height: 3rem;
-        margin-right: 1rem;
+        margin: 0.7rem;
     }
 }
 
