@@ -24,6 +24,9 @@
         @include respond(2000) {
             grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
         }
+        @include respond(500) {
+            grid-template-columns: repeat(2, 1fr);
+        }
         justify-items: center;
         align-items: start;
     }
@@ -34,6 +37,7 @@
     flex-direction: column;
     align-items: center;
     min-height: 20rem;
+    padding: 1rem;
     &__image {
         display: block;
         border-radius: 50%;
@@ -44,6 +48,7 @@
     }
     &__header {
         color: $color-primary;
+        white-space: nowrap;
     }
     &__text {
         text-align: center;

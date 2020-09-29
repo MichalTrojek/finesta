@@ -234,12 +234,16 @@ body > * {
     @media only screen and (max-width: 125em) {
       .people__cards {
         grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); } }
+    @media only screen and (max-width: 31.25em) {
+      .people__cards {
+        grid-template-columns: repeat(2, 1fr); } }
 
 .card {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 20rem; }
+  min-height: 20rem;
+  padding: 1rem; }
   .card__image {
     display: block;
     border-radius: 50%;
@@ -248,7 +252,8 @@ body > * {
     margin-bottom: 1rem;
     filter: grayscale(100%); }
   .card__header {
-    color: #616161; }
+    color: #616161;
+    white-space: nowrap; }
   .card__text {
     text-align: center;
     color: #616161; }
