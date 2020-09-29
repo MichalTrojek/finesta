@@ -12,10 +12,15 @@
     grid-template-rows: max-content max-content max-content 1fr;
     row-gap: 6rem;
     @include respond(850) {
-        row-gap: 3rem;
+        grid-template-columns: 1fr 5fr 1fr;
+        row-gap: 7rem;
+    }
+    @include respond(600) {
+        grid-template-columns: 1fr 10fr 1fr;
     }
     @include respond(500) {
-        row-gap: 8rem;
+        grid-template-columns: 0fr 12fr 0fr;
+        row-gap: 7rem;
     }
     color: #fff;
     &__heading {
@@ -25,8 +30,7 @@
         width: 50%;
         text-shadow: 3px 3px 0px #000;
         @include respond(950) {
-            width: 75%;
-            line-height: 1;
+            width: 90%;
         }
         span {
             color: $color-red;
@@ -41,9 +45,10 @@
         @include respond(950) {
             line-height: 2;
         }
-        @include respond(414) {
-            font-size: 2.5rem;
-            padding: 0 1rem 0 1rem;
+        @include respond(500) {
+            padding: 0 0.2rem 0 0.2rem;
+            font-size: 1.7rem;
+            line-height: 2.5;
         }
     }
 }

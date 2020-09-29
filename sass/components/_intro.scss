@@ -10,6 +10,9 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     column-gap: 5rem;
+    @include respond(500) {
+        column-gap: 0rem;
+    }
     transform: translateY(40%);
     box-shadow: -0.588px 0.809px 76px rgba(0, 0, 0, 0.21);
     @include respond(1000) {
@@ -19,11 +22,12 @@
     }
     line-height: 1;
     padding: 3rem;
-    padding-right: 0;
     &__card {
         padding: 2rem;
+        @include respond(500) {
+            padding: 1rem;
+        }
     }
-    //test
     &__heading {
         font-size: 8rem;
         text-align: start;

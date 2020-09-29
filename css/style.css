@@ -15,12 +15,12 @@ html {
   @media only screen and (max-width: 75em) {
     html {
       font-size: 50%; } }
+  @media only screen and (max-width: 59.37em) {
+    html {
+      font-size: 48%; } }
   @media only screen and (max-width: 43.75em) {
     html {
-      font-size: 40%; } }
-  @media only screen and (max-width: 25.875em) {
-    html {
-      font-size: 30%; } }
+      font-size: 45%; } }
 
 body > * {
   font-family: "Poppins", sans-serif;
@@ -70,10 +70,15 @@ body > * {
   color: #fff; }
   @media only screen and (max-width: 53.125em) {
     .header {
-      row-gap: 3rem; } }
+      grid-template-columns: 1fr 5fr 1fr;
+      row-gap: 7rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .header {
+      grid-template-columns: 1fr 10fr 1fr; } }
   @media only screen and (max-width: 31.25em) {
     .header {
-      row-gap: 8rem; } }
+      grid-template-columns: 0fr 12fr 0fr;
+      row-gap: 7rem; } }
   .header__heading {
     z-index: 2;
     grid-column: 2 / span 1;
@@ -82,10 +87,7 @@ body > * {
     text-shadow: 3px 3px 0px #000; }
     @media only screen and (max-width: 59.37em) {
       .header__heading {
-        line-height: 1; } }
-    @media only screen and (max-width: 59.37em) {
-      .header__heading {
-        width: 75%; } }
+        width: 90%; } }
     .header__heading span {
       color: #f40e29; }
   .header__text {
@@ -97,10 +99,11 @@ body > * {
     @media only screen and (max-width: 59.37em) {
       .header__text {
         line-height: 2; } }
-    @media only screen and (max-width: 25.875em) {
+    @media only screen and (max-width: 31.25em) {
       .header__text {
-        font-size: 2.5rem;
-        padding: 0 1rem 0 1rem; } }
+        padding: 0 0.2rem 0 0.2rem;
+        font-size: 1.7rem;
+        line-height: 2.5; } }
 
 .about {
   grid-column: full-start/full-end;
@@ -475,8 +478,10 @@ body > * {
   transform: translateY(40%);
   box-shadow: -0.588px 0.809px 76px rgba(0, 0, 0, 0.21);
   line-height: 1;
-  padding: 3rem;
-  padding-right: 0; }
+  padding: 3rem; }
+  @media only screen and (max-width: 31.25em) {
+    .intro {
+      column-gap: 0rem; } }
   @media only screen and (max-width: 62.5em) {
     .intro {
       transform: translateY(0);
@@ -484,6 +489,9 @@ body > * {
       width: 100%; } }
   .intro__card {
     padding: 2rem; }
+    @media only screen and (max-width: 31.25em) {
+      .intro__card {
+        padding: 1rem; } }
   .intro__heading {
     font-size: 8rem;
     text-align: start;
