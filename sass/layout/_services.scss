@@ -20,6 +20,6 @@
     grid-row: 2 / span 1;
     grid-column: 1 / span 3;
     @include respond(1000) {
-        width: 80%;
+        width: 90%;
     }
 }
