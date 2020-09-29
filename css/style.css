@@ -674,6 +674,10 @@ body > * {
   @media only screen and (max-width: 68.75em) {
     .prev {
       left: -5rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .prev {
+      top: 120%;
+      left: 10%; } }
 
 .next {
   border-radius: 0 3px 3px 0;
@@ -681,6 +685,10 @@ body > * {
   @media only screen and (max-width: 68.75em) {
     .next {
       right: -5rem; } }
+  @media only screen and (max-width: 62.5em) {
+    .next {
+      top: 120%;
+      right: 10%; } }
 
 .prev:hover,
 .next:hover {
