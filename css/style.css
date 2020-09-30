@@ -43,13 +43,18 @@ body > * {
 
 .heading-2 {
   font-family: "Poppins", sans-serif;
-  font-weight: 700;
+  font-weight: 900;
   font-size: 5rem; }
 
 .heading-3 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
   font-size: 3.5rem; }
+
+.heading-4 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem; }
 
 .mg-b-sm {
   margin-bottom: 2rem; }
