@@ -31,7 +31,7 @@ body > * {
 .container {
   display: grid;
   grid-template-columns: [full-start] 4fr [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] 4fr [full-end];
-  grid-template-rows: minmax(70vh, max-content) minmax(75vh, max-content) minmax(75vh, max-content) max-content minmax(75vh, max-content) minmax(90vh, max-content) max-content; }
+  grid-template-rows: minmax(70vh, max-content) minmax(75vh, max-content) max-content max-content minmax(75vh, max-content) minmax(90vh, max-content) max-content; }
   @media only screen and (max-width: 81.25em) {
     .container {
       grid-template-columns: [full-start] [center-start] repeat(10, [col-start] 1fr [col-end]) [center-end] [full-end]; } }
@@ -44,12 +44,12 @@ body > * {
 .heading-2 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 3.2rem; }
+  font-size: 5rem; }
 
 .heading-3 {
   font-family: "Poppins", sans-serif;
   font-weight: 700;
-  font-size: 2rem; }
+  font-size: 3.5rem; }
 
 .mg-b-sm {
   margin-bottom: 2rem; }
@@ -58,7 +58,7 @@ body > * {
   position: relative;
   grid-column: full-start/full-end;
   grid-row: 1 / span 1;
-  background-image: linear-gradient(to right, rgba(38, 19, 72, 0.4), rgba(255, 0, 0, 0.4)), url(../img/header.png);
+  background-image: url(../img/header.png);
   background-size: cover;
   background-position: top;
   display: grid;
@@ -281,6 +281,7 @@ body > * {
   background-size: cover;
   display: grid;
   grid-template-columns: 1fr 10fr 1fr;
+  padding: 3rem;
   grid-template-rows: max-content 1fr;
   justify-items: center; }
   @media only screen and (max-width: 81.25em) {
@@ -297,16 +298,10 @@ body > * {
   .whoarewe__video {
     grid-column: 2 / span 1;
     grid-row: 2 / span 1;
-    align-self: center;
-    width: 80%;
-    height: 80%; }
+    align-self: center; }
     @media only screen and (max-width: 81.25em) {
       .whoarewe__video {
         grid-column: 1 / -1; } }
-    @media only screen and (max-width: 62.5em) {
-      .whoarewe__video {
-        width: 90%;
-        height: 70%; } }
 
 .footer {
   grid-column: full-start/full-end;

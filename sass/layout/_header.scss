@@ -2,7 +2,7 @@
     position: relative;
     grid-column: full-start/full-end;
     grid-row: 1 / span 1;
-    background-image: linear-gradient( to right, rgba(#261348, 0.4), rgba(#ff0000, 0.4)), url(../img/header.png);
+    background-image: url(../img/header.png);
     background-size: cover;
     background-position: top;
     display: grid;
