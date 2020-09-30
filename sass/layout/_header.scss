@@ -28,7 +28,6 @@
         grid-column: 2 / span 1;
         text-align: center;
         width: 50%;
-        text-shadow: 3px 3px 0px #000;
         @include respond(950) {
             width: 90%;
         }

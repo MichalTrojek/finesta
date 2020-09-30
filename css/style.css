@@ -88,8 +88,7 @@ body > * {
     z-index: 2;
     grid-column: 2 / span 1;
     text-align: center;
-    width: 50%;
-    text-shadow: 3px 3px 0px #000; }
+    width: 50%; }
     @media only screen and (max-width: 59.37em) {
       .header__heading {
         width: 90%; } }
@@ -307,6 +306,9 @@ body > * {
     @media only screen and (max-width: 81.25em) {
       .whoarewe__video {
         grid-column: 1 / -1; } }
+    @media only screen and (max-width: 53.125em) {
+      .whoarewe__video {
+        max-width: 90%; } }
 
 .footer {
   grid-column: full-start/full-end;

@@ -27,6 +27,9 @@
         @include respond(1300) {
             grid-column: 1 / -1;
         }
+        @include respond(850) {
+            max-width: 90%;
+        }
         align-self: center;
     }
 }
